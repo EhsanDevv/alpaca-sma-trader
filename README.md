@@ -92,8 +92,8 @@ python3 main.py
 **Sample output**
 ```
 SMA_170: 748.79
-SMA_25:  722.65
-Maintaining position
+SMA_25:  749.65
+Buy order placed
 ...
 ^C
 Terminating process: Shutting down
@@ -106,7 +106,6 @@ Stop the engine at any time with `Ctrl+C` for a clean shutdown.
 ```
 alpaca-sma-trader/
 ├── main.py            # Engine: bootstrap, polling loop, strategy, order execution
-├── requirements.txt
 ├── .env               # API credentials (git-ignored, not committed)
 └── README.md
 ```
