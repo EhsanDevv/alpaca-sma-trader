@@ -6,7 +6,7 @@
 
 A continuous, event-driven **paper-trading bot** that trades the S&P 500 ETF (`SPY`) using a dual **Simple Moving Average (SMA) crossover** strategy, executed live against the Alpaca paper-trading API.
 
-Built in pure Python with a minimal dependency footprint, the engine bootstraps from historical market data, maintains a rolling price window in memory, and autonomously submits orders when momentum shifts — all while keeping API credentials isolated and trading risk contained to a paper account.
+Built in pure Python with a minimal dependency footprint, the engine bootstraps from historical market data, maintains a rolling price window in memory, and autonomously submits orders when momentum shifts, all while keeping API credentials isolated and trading risk contained to a paper account.
 
 > ⚠️ **Educational project.** This runs exclusively against Alpaca's **paper-trading** environment. It is not financial advice and is not intended for live capital.
 
@@ -27,7 +27,7 @@ Built in pure Python with a minimal dependency footprint, the engine bootstraps 
 
 The engine runs in two phases:
 
-**1. Historical bootstrap.** On startup it pulls recent 1-minute bars for `SPY` from Alpaca's Market Data v2 API (UTC, IEX feed) and seeds a rolling window with the most recent **170 closing prices**. This gives the moving averages enough history to be meaningful from the very first tick — no warm-up period where the bot trades blind.
+**1. Historical bootstrap.** On startup it pulls recent 1-minute bars for `SPY` from Alpaca's Market Data v2 API (UTC, IEX feed) and seeds a rolling window with the most recent **170 closing prices**. This gives the moving averages enough history to be meaningful from the very first tick.
 
 **2. Live polling loop.** Every 60 seconds the engine requests the latest quote, appends the new price to the rolling window, drops the oldest entry, and recomputes both moving averages:
 
