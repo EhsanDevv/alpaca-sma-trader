@@ -61,8 +61,8 @@ A position-state flag ensures the engine never stacks duplicate buys and never a
 
 ### 2. Clone and install
 ```bash
-git clone https://github.com/EhsanDevv/quant-engine.git
-cd quant-engine
+git clone https://github.com/EhsanDevv/alpaca-sma-trader.git
+cd alpaca-sma-trader
 
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
@@ -104,7 +104,7 @@ Stop the engine at any time with `Ctrl+C` for a clean shutdown.
 
 ## 📁 Project structure
 ```
-quant-engine/
+alpaca-sma-trader/
 ├── main.py            # Engine: bootstrap, polling loop, strategy, order execution
 ├── requirements.txt
 ├── .env               # API credentials (git-ignored, not committed)
